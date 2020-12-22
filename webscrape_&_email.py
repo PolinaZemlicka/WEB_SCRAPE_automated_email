@@ -70,5 +70,5 @@ while True:
     # send every 24 hrs
     time.sleep(60 * 60 * 24)
 
-    # some comment here
+    # some comment heres
 
