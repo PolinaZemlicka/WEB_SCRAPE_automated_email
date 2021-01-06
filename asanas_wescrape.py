@@ -19,10 +19,14 @@ for row in table.findAll("tr"):
         Asanas.append(cells[0].find(text=True))
         English.append(cells[2].find(text=True).replace("\n","").replace(",",""))
 
-# create a database & connect
-connection = sqlite3.connect("asanas.db")
-# cursor
-crsr = connection.cursor()
+print(Asanas)
+print(English)
+
+
+# # create a database & connect
+# connection = sqlite3.connect("asanas.db")
+# # cursor
+# crsr = connection.cursor()
 
 # comment out what is already executed:
 # SQL command to create a table in the database
@@ -36,7 +40,7 @@ crsr = connection.cursor()
 
 # crsr.execute(sql_command)
 
-crsr.executemany("INSERT INTO asanas(name, english) VALUES(?,?)",
-                 zip(Asanas, English))
-connection.commit()
+# crsr.executemany("INSERT INTO asanas(name, english) VALUES(?,?)",
+#                  zip(Asanas, English))
+# connection.commit()
 
